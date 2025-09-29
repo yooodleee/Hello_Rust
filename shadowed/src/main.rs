@@ -1,6 +1,16 @@
 fn main() {
     let x = 5;
 
+    // difference between mut and let?
+    let spaces = "    ";        // string type
+    let spaces = spaces.len();  // reusable name(spaces) -> good case
+
+    /*
+    bad case -> use mut keyword
+    let mut spaces = "    ";    // expected due to this value("    ")
+    spaces = spaces.len();      // expected `&str`, found `usize`(error)
+     */
+
     let x = x + 1; // shadowed
 
     {
