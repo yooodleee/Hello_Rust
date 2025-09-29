@@ -1,27 +1,15 @@
 fn main() {
-    let x = 5;      // variable x -> immutable(default)
-    println!("The value of x is: {x}");
-    x = 6;          // Error
-    println!("The value of x is: {x}");
+    let mut x = 5;  // add mut keyword -> generate mutable variable x 
+    println!("The value x is: {x}");
+    x = 6;          // x = 5 -> x = 6
+    println!("The value x is: {x}");
 }
 
 // output: 
 /*
    Compiling variables v0.1.0 (C:\Users\dhals_zn0ga5j\python_seed\Hello_Rust\Hello_Rust\variables)
-error[E0384]: cannot assign twice to immutable variable `x`
- --> src\main.rs:4:5
-  |
-2 |     let x = 5;
-  |         - first assignment to `x`
-3 |     println!("The value of x is: {x}");
-4 |     x = 6;
-  |     ^^^^^ cannot assign twice to immutable variable
-  |
-help: consider making this binding mutable
-  |
-2 |     let mut x = 5;
-  |         +++
-
-For more information about this error, try `rustc --explain E0384`.
-error: could not compile `variables` (bin "variables") due to 1 previous error
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 1.85s
+     Running `C:\Users\dhals_zn0ga5j\python_seed\Hello_Rust\Hello_Rust\variables\target\debug\variables.exe main.rs`
+The value x is: 5
+The value x is: 6
 */
